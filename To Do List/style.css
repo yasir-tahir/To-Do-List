@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(to top, grey, rgb(95, 94, 94));
+    padding: 10px;
+}
+
+.container{
+    background:white;
+    width: 100%;
+    max-width: 540px;
+    margin: 150px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #afafaf; 
+    position: absolute;
+}
+
+h1{
+    color: navy;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+h1> img{
+    width: 50px;
+    position: absolute;
+    right: 0px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 3px groove black;
+    outline-offset: 5px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px grey;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background:transparent;
+    font-size: 18px;
+    font-weight: 600px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+input::placeholder{
+    color: navy;
+}
+
+
+ul>li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500px;
+    letter-spacing: 1px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    margin: block;
+
+}
+
+ul>li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(images/uncheck-box.png);
+    background-size: cover;
+    position: center;
+    top: 12px;
+    left: 8px;
+
+}
+
+button{
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding: 16px 30px;
+    background: black;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 1px;
+}
