@@ -9,9 +9,12 @@ body{
     min-height: 100vh;
     background:linear-gradient(to top, grey, rgb(95, 94, 94));
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container{
+.todo-app{
     background:white;
     width: 100%;
     max-width: 540px;
@@ -20,6 +23,8 @@ body{
     border-radius: 50px;
     box-shadow: 0 0 5px #afafaf; 
     position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
@@ -68,13 +73,14 @@ input::placeholder{
 ul>li{
     list-style: none;
     font-size: 18px;
-    font-weight: 500px;
+    font-weight: bolder;
     letter-spacing: 1px;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
     margin: block;
+    margin-top: 10px;
 
 }
 
@@ -87,7 +93,7 @@ ul>li::before{
     background: url(images/uncheck-box.png);
     background-size: cover;
     position: center;
-    top: 12px;
+    top: 8px;
     left: 8px;
 
 }
@@ -103,4 +109,51 @@ button{
     font-weight: 600;
     cursor: pointer;
     margin: 1px;
+}
+
+
+ul>li.checked{
+    background-color: #3700a4;
+    color: white;
+    border-radius: 50px;
+
+}
+
+ul>li.checked::before{
+    background: url(images/checked.png);
+    background-size: cover;
+    align-items: center;
+    top:8px;
+    left: 8px;
+}
+
+
+li>span{
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    border-radius: 50%;    
+}
+
+li>span:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+li.checked>span{
+    color: white;
+}
+
+li.checked>span:hover{
+    background: white;
+    color: black;
 }
